@@ -5,16 +5,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon img ---------------------------------------------------------->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static '/images/favicon.png' %}"
+    />
     <title>Home</title>
+    <!-- main css styling ---------------------------------------------------------->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
+    <!-- ajax script ---------------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- font-awesome cdn ---------------------------------------------------------->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <!-- bootstrap css cdn ---------------------------------------------------------->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,6 +33,7 @@
       crossorigin="anonymous"
     />
 
+    <!-- font cdn ---------------------------------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +41,7 @@
       rel="stylesheet"
     />
 
+    <!-- first color selector -------------------------------------------------------- -->
     <link
       id="style"
       href="{% static 'css/color-1.css' %}"
@@ -36,6 +49,8 @@
       data-color="blue"
       disabled
     />
+
+    <!-- second color selector -------------------------------------------------------- -->
     <link
       id="style"
       href="{% static 'css/color-2.css' %}"
@@ -43,6 +58,8 @@
       rel="stylesheet"
       data-color="black"
     />
+
+    <!-- third color selector ---------------------------------------------------------->
     <link
       id="style"
       href="{% static 'css/color-3.css' %}"
@@ -50,6 +67,8 @@
       rel="stylesheet"
       data-color="white"
     />
+
+    <!-- sweet alert cdn -------------------------------------------------------- -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
