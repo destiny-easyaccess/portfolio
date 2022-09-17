@@ -1,0 +1,98 @@
+{% for profile in profiles %}
+<!-- about section -->
+<section class="about">
+  <div class="wrapper">
+    <div class="header">
+      <h4>About Me</h4>
+    </div>
+    <div class="grid-container">
+      <div class="first-grid">
+        <div class="img-cont">
+          <img id="about" src="{{profile.imageurl}}" alt="" />
+          <div class="btn">
+            <p>{{profile.bio}}</p>
+            <button>Download Resume</button>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="skill">
+          <div class="con">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-interval="false"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+              </div>
+              <div id="inner-aboutcon" class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="profile-item">
+                    <p>Personal Profile</p>
+                    <div class="profile-detail">
+                      <div class="first-flex">
+                        <ul>
+                          <li><i class="fa fa-check-circle"></i>Firstname:</li>
+                          <li><i class="fa fa-check-circle"></i>Lastname:</li>
+                          <li>
+                            <i class="fa fa-check-circle"></i>Date of Birth:
+                          </li>
+                          <li><i class="fa fa-check-circle"></i>Gender:</li>
+                          <li>
+                            <i class="fa fa-check-circle"></i>Nationality:
+                          </li>
+                          <li><i class="fa fa-check-circle"></i>City:</li>
+                          <li><i class="fa fa-check-circle"></i>Language:</li>
+                        </ul>
+                      </div>
+                      <div class="second-flex">
+                        <li>{{profile.first_name}} &nbsp;</li>
+                        <li>{{profile.last_name}}</li>
+                        <li>{{profile.date_of_birth}}</li>
+                        <li>{{profile.gender}}</li>
+                        <li>{{profile.nationality}}</li>
+                        <li>{{profile.city}}</li>
+                        <li>{{profile.language}}</li>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="profile-item">
+                    <p>Skills</p>
+                    <div class="profile-detail">
+                      <div class="first-flex">
+                        <ul>
+                          {% for skill in skills %}
+                          <li>
+                            <i class="fa fa-check-circle"></i>{{skill.title}}
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}

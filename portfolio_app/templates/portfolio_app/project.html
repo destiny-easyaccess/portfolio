@@ -1,0 +1,53 @@
+<!-- projects section -->
+<section id="portfolio" class="projects">
+  <div class="wrapper">
+    <div class="header">
+      <h4>My Recent Projects</h4>
+    </div>
+    <div class="main-container">
+      {% for project in projects %}
+      <div class="single-container">
+        <img src="{{project.imageurl}}" alt="" />
+        <div class="layer">
+          <div>
+            <p>{{project.title}}</p>
+            <button id="modal-btn" class="small" data-id="{{project.id}}">
+              <i class="fa fa-street-view"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- project-details section -->
+<section id="modal-container" class="project-details">
+  <i id="close" class="fa fa-times"></i>
+
+  <div
+    id="details"
+    class="carousel slide container-body"
+    data-bs-interval="false"
+  >
+    <div id="details-container" class="carousel-inner"></div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#details"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#details"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</section>

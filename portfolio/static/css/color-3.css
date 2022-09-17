@@ -1,0 +1,13 @@
+:root {
+  --main-color: #fff;
+  --lead-color: #ce8500;
+  --light-color: #292a2a;
+  --background: #d8d9dfd8;
+  --text-color: rgb(0, 0, 0) !important;
+  --background-image: #fff !important;
+  --background-blend: #ffffff7b !important;
+}
+
+body {
+  background-color: #f3f2ef !important;
+}

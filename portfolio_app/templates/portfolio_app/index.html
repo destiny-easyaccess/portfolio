@@ -1,0 +1,180 @@
+{% extends 'portfolio_app/base.html' %} {% block content%} {% load static%}
+<header>
+  <div class="wrapper">
+    <img src="{% static '/images/favicon.png' %}" alt="" />
+    <li id="bars"><i class="fa fa-bars"></i></li>
+    <nav id="nav-container" class="center-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+
+    <nav class="right-nav">
+      <li id="nav-btn"><a href="#contact">HIRE ME</a></li>
+    </nav>
+  </div>
+</header>
+
+{% for profile in profiles %}
+<!-- home section -->
+<section id="home" class="home">
+  <div class="wrapper">
+    <div class="cont">
+      <article>
+        <h2>Welcome to my Portfolio</h2>
+        <p>My name is {{profile.user.username}}</p>
+        <span>Full Stack Webdeveloper / Graphic Designer</span>
+        <div class="icons">
+          <div class="single-icon">
+            <a href="" class="fa fa-facebook"></a>
+          </div>
+          <div class="single-icon">
+            <a href="" class="fa fa-linkedin"></a>
+          </div>
+          <div class="single-icon">
+            <a href="" class="fa fa-youtube"></a>
+          </div>
+          <div class="single-icon">
+            <a href="" class="fa fa-twitter"></a>
+          </div>
+          <div class="single-icon">
+            <a href="" class="fa fa-whatsapp"></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{% include 'portfolio_app/about.html' %}
+
+<!-- service section -->
+<section id="service" class="service">
+  <div class="wrapper">
+    <div class="header">
+      <h4>Services</h4>
+    </div>
+    <div class="main-container">
+      <div class="single">
+        <div class="sub">
+          <a href="#contact">Hire me</a>
+        </div>
+        <i class="fa fa-desktop"></i>
+        <h4>Web Design</h4>
+        <p>
+          Good at UI designs of all types e.g Eccormerce websites, Portfolio and
+          many more
+        </p>
+      </div>
+      <div class="single">
+        <i class="fa fa-codepen"></i>
+        <h4>Web Development</h4>
+        <p>
+          Developing of websites using Django, building of Api's with
+          RestFramework i am at you service
+        </p>
+        <div class="sub">
+          <a href="#contact">Hire me</a>
+        </div>
+      </div>
+      <div class="single">
+        <i class="fa fa-paint-brush"></i>
+        <h4>Graphic Design</h4>
+        <p>Design flyers, complemetary Cards, logos and all types of designs</p>
+        <div class="sub">
+          <a href="#contact">Hire me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include 'portfolio_app/project.html' %}
+
+<!-- contact form section -->
+<section id="contact" class="contact">
+  <div class="wrapper">
+    <div class="text-container">
+      <h2>LOOKING FOR WEBSITE DEVELOPER/ GRAPHIC DESIGN?</h2>
+      <p>
+        Got you covered, send me mail with your working email, i will responde
+        shortly, Thanks!!
+      </p>
+      <div class="icons">
+        <div class="single-icon">
+          <a href="" class="fa fa-facebook"></a>
+        </div>
+        <div class="single-icon">
+          <a href="" class="fa fa-linkedin"></a>
+        </div>
+        <div class="single-icon">
+          <a href="" class="fa fa-youtube"></a>
+        </div>
+        <div class="single-icon">
+          <a href="" class="fa fa-twitter"></a>
+        </div>
+        <div class="single-icon">
+          <a href="" class="fa fa-whatsapp"></a>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <form id="form" action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <div class="input-cont">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="input-cont">
+          <input
+            id="name"
+            name="fullname"
+            type="text"
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div class="input-cont">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="input-cont">
+          <textarea
+            name="body"
+            required
+            id="body"
+            cols="30"
+            rows="5"
+            placeholder="Write your message"
+          ></textarea>
+        </div>
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- color picker styling -->
+<section id="picker" class="color-picker">
+  <i id="cog" class="fa fa-cog"> </i>
+  <div class="box">
+    <div class="color1" id="color-select" data-color="blue"></div>
+    <div class="color2" id="color-select" data-color="black"></div>
+    <div class="color3" id="color-select" data-color="white"></div>
+  </div>
+</section>
+
+<!-- footer section -->
+{% endfor %}
+<footer>
+  <div class="wrapper">
+    <div class="copywriter">Copywrite 2022 by Destiny</div>
+  </div>
+</footer>
+{% endblock %}

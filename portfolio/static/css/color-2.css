@@ -1,0 +1,9 @@
+:root {
+  --main-color: #090a0a !important;
+  --lead-color: #ce0000 !important;
+  --light-color: #abb8c3 !important;
+  --background: #2b2b2b99 !important;
+  --text-color: #fff !important;
+  --background-image: url(../images/black2.jpg) !important;
+  --background-blend: #12131687;
+}

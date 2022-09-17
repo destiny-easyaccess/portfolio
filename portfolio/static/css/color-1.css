@@ -1,0 +1,8 @@
+:root {
+  --main-color: rgba(22, 34, 57, 0.95);
+  --lead-color: #ce8500;
+  --light-color: #abb8c3;
+  --background: #0c1228d8;
+  --text-color: #fff !important;
+  --background-image: url(../images/courses-bg.jpg);
+}
