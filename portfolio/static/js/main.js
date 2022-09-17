@@ -1,4 +1,3 @@
-
 let loaderGif = document.getElementById('loader');
 let navOpen = false;
 
@@ -44,7 +43,6 @@ let modalToggle = () => {
           data = JSON.parse(response.data);
           loaderGif.style.display = 'none';
           data.forEach((item) => {
-            console.log(item.fields.image);
             if (item.fields.order_of_display == 1) {
               detailContainer.innerHTML += `
                 <div class="carousel-item active">
