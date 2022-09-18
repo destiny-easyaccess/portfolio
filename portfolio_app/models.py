@@ -1,9 +1,3 @@
-from email import message
-from email.mime import image
-from re import T
-from statistics import mode
-from tabnanny import verbose
-from turtle import title
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
