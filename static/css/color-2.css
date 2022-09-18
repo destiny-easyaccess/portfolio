@@ -4,6 +4,6 @@
   --light-color: #abb8c3 !important;
   --background: #2b2b2b99 !important;
   --text-color: #fff !important;
-  --background-image: url(../images/black2.jpg) !important;
+  --background-image: url(/images/black2.jpg) !important;
   --background-blend: #12131687;
 }
