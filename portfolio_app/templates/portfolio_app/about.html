@@ -1,6 +1,6 @@
-{% for profile in profiles %}
+{% for profile in profiles %} {% load static %}
 <!-- about section -->
-<section class="about">
+<section id="about" class="about">
   <div class="wrapper">
     <div class="header">
       <h4>About Me</h4>
@@ -11,7 +11,9 @@
           <img id="about" src="{{profile.imageurl}}" alt="" />
           <div class="btn">
             <p>{{profile.bio}}</p>
-            <button>Download Resume</button>
+            <a href="{% static 'images/resume.pdf' %}" download="resume">
+              <i class="fa fa-download"></i> &nbsp; Download Resume</a
+            >
           </div>
         </div>
       </div>

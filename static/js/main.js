@@ -50,7 +50,9 @@ let modalToggle = () => {
                     <img src="images/${item.fields.image}" alt="">
                     <div class="side">
                       <div class="content">
-                        <a href="" > <i class="fa fa-github"></i> View Source Code</a>
+                        <a href="${item.fields.github_link}" 
+                        target="”_blank”"
+                        > <i class="fa fa-github"></i> View Source Code</a>
                         <p class="header">${item.fields.title}</p>
                         <div class="website-details">
                           <p id="drop-icon">
@@ -100,7 +102,9 @@ let modalToggle = () => {
                     <img src="images/${item.fields.image}" alt="">
                     <div class="side">
                       <div class="content">
-                        <a href="" > <i class="fa fa-github"></i> View Source Code</a>
+                      <a href="${item.fields.github_link}" 
+                      target="”_blank”"
+                      > <i class="fa fa-github"></i> View Source Code</a>
                         <p class="header">${item.fields.title}</p>
                         <div class="website-details">
                           <p id="drop-icon">

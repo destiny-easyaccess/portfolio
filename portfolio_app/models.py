@@ -56,6 +56,7 @@ class ProjectDetails(models.Model):
     difficulties = models.TextField(null=True, blank=True)
     technology = models.TextField(null=True, blank=True)
     order_of_display = models.PositiveIntegerField( blank=True, null=True)
+    github_link = models.URLField(null=True, blank=True) 
     def __str__(self) -> str:
         return str(self.project)
    
