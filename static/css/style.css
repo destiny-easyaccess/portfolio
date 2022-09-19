@@ -456,6 +456,7 @@ header img {
   }
   .about .grid-container .first-grid .img-cont img {
     width: 60%;
+  }
 }
 @media screen and (max-width: 720px) {
   .about .grid-container .second .skill {
