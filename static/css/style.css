@@ -451,6 +451,11 @@ header img {
   .about .grid-container .second .skill li {
     font-size: 14px !important;
   }
+  .about .grid-container .first-grid .img-cont {
+    padding: 10px !important;
+  }
+  .about .grid-container .first-grid .img-cont img {
+    width: 60%;
 }
 @media screen and (max-width: 720px) {
   .about .grid-container .second .skill {
@@ -460,7 +465,7 @@ header img {
     grid-template-columns: 1fr;
   }
   .about .grid-container .first-grid .img-cont img {
-    width: 60%;
+    width: 70%;
   }
   .about .grid-container .first-grid .img-cont {
     width: 100% !important;
