@@ -111,6 +111,11 @@ ul {
   .header h4 {
     font-size: 28px;
   }
+  .wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 100px 0px;
+  }
 }
 /********************************************************************/
 /******************************** navbar styling ********************************/
@@ -198,12 +203,22 @@ header img {
     cursor: pointer;
   }
 }
-
+@media screen and (max-width: 450px) {
+  header .right-nav li a {
+    font-size: 14px !important;
+  }
+  header .right-nav li {
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    padding: 6px 9px;
+  }
+}
 /********************************************************************/
 /******************************** home styling ********************************/
 .home {
   width: 100%;
   height: 50vh;
+  background-color: var(--main-color) !important;
 }
 .home::before {
   background: url(/images/background.jpg);
@@ -216,7 +231,7 @@ header img {
   width: 100%;
   height: 90vh;
   background-color: var(--background);
-  transform: skewy(6deg);
+  transform: skewy(4deg);
   right: 0px;
   top: 0px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.726);
@@ -284,6 +299,24 @@ header img {
   }
   .home::before {
     height: 70vh;
+  }
+}
+@media screen and (max-width: 430px) {
+  .home .cont h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .home p {
+    color: var(--lead-color);
+    font-size: 15px;
+  }
+  .home span {
+    font-size: 15px;
+  }
+
+  .icons .single-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -447,7 +480,7 @@ header img {
 }
 .main-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
 }
 .main-container .single .sub {
@@ -511,6 +544,19 @@ header img {
 .service .main-container .single button:hover {
   border: 2px solid var(--text-color);
   background-color: transparent;
+}
+@media screen and (max-width: 400px) {
+  .service .main-container .single h4 {
+    font-size: 20px;
+  }
+  .service .main-container .single p {
+    font-size: 15px;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 10px;
+  }
 }
 
 /********************************************************************/
@@ -661,7 +707,7 @@ header img {
   }
   .project-details #close {
     right: 80px !important;
-    top: 0px;
+    top: 5px;
     font-size: 20px !important;
   }
 

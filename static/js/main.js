@@ -150,7 +150,7 @@ let modalToggle = () => {
           loaderGif.style.display = 'none';
           swal({
             title: 'Try Again later !',
-            text: 'This Project is Development Stage, ',
+            text: 'An Error occured again later, ',
             icon: 'error'
           });
         }
