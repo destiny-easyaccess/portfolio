@@ -374,14 +374,11 @@ header img {
   border-left: 5px solid var(--lead-color);
 }
 .about .grid-container .btn {
-  position: relative;
   background-color: var(--main-color);
   width: 80%;
   border: none;
   color: var(--light-color);
-  margin-top: -100px;
   font-size: 16px;
-  padding-top: 10px;
 }
 
 .about .grid-container .btn a {

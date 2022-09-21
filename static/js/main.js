@@ -40,20 +40,19 @@ let modalToggle = () => {
         type: 'GET',
         url: `/get_pro_data/${pk}`,
         success: function (response) {
-          data = JSON.parse(response.data);
           loaderGif.style.display = 'none';
-          data.forEach((item) => {
-            if (item.fields.order_of_display == 1) {
+          response.forEach((item) => {
+            if (item.order_of_display == 1) {
               detailContainer.innerHTML += `
                 <div class="carousel-item active">
                   <div class="detail-grid">
-                    <img src="images/${item.fields.image}" alt="">
+                    <img src="${item.image}" alt="">
                     <div class="side">
                       <div class="content">
-                        <a href="${item.fields.github_link}" 
+                        <a href="${item.github_link}" 
                         target="”_blank”"
                         > <i class="fa fa-github"></i> View Source Code</a>
-                        <p class="header">${item.fields.title}</p>
+                        <p class="header">${item.title}</p>
                         <div class="website-details">
                           <p id="drop-icon">
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#description" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -62,7 +61,7 @@ let modalToggle = () => {
                           </p>
                           <div class="collapse" id="description">
                             <div class="card card-body">
-                            ${item.fields.description}
+                            ${item.description}
                             </div>
                           </div>
 
@@ -73,7 +72,7 @@ let modalToggle = () => {
                           </p>
                           <div class="collapse" id="difficulties">
                             <div class="card card-body">
-                            ${item.fields.difficulties}
+                            ${item.difficulties}
                             </div>
                           </div>
 
@@ -85,7 +84,7 @@ let modalToggle = () => {
 
                           <div class="collapse" id="technology">
                             <div class="card card-body">
-                            ${item.fields.technology}
+                            ${item.technology}
                             </div>
                           </div>
 
@@ -99,13 +98,13 @@ let modalToggle = () => {
               detailContainer.innerHTML += `
               <div class="carousel-item">
                   <div class="detail-grid">
-                    <img src="images/${item.fields.image}" alt="">
+                    <img src="images/${item.image}" alt="">
                     <div class="side">
                       <div class="content">
-                      <a href="${item.fields.github_link}" 
+                      <a href="${item.github_link}" 
                       target="”_blank”"
                       > <i class="fa fa-github"></i> View Source Code</a>
-                        <p class="header">${item.fields.title}</p>
+                        <p class="header">${item.title}</p>
                         <div class="website-details">
                           <p id="drop-icon">
                             <a class="btn btn-primary" data-bs-toggle="collapse" href="#description" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -114,7 +113,7 @@ let modalToggle = () => {
                           </p>
                           <div class="collapse" id="description">
                             <div class="card card-body">
-                            ${item.fields.description}
+                            ${item.description}
                             </div>
                           </div>
 
@@ -125,7 +124,7 @@ let modalToggle = () => {
                           </p>
                           <div class="collapse" id="difficulties">
                             <div class="card card-body">
-                            ${item.fields.difficulties}
+                            ${item.difficulties}
                             </div>
                           </div>
 
@@ -137,7 +136,7 @@ let modalToggle = () => {
 
                           <div class="collapse" id="technology">
                             <div class="card card-body">
-                            ${item.fields.technology}
+                            ${item.technology}
                             </div>
                           </div>
 

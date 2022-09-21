@@ -59,10 +59,10 @@ class ProjectDetails(models.Model):
     github_link = models.URLField(null=True, blank=True) 
     def __str__(self) -> str:
         return str(self.project)
-   
-    
     class Meta:
         verbose_name_plural = 'projectdetails'
+ 
+ 
     
 
 

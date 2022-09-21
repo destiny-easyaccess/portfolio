@@ -1,10 +1,18 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
-from django.core import serializers
 from .models import *
 from django.core.mail import send_mail
 from django.contrib import messages
-from django.conf import settings
+from .serializers import *
+from rest_framework.response import Response    
+from rest_framework.decorators import api_view
+
+@api_view(['GET'])
+def get_project_details(request, pk):
+    projects_obj = Project.objects.get(id=pk)
+    project_details = projects_obj.projectdetails_set.all()
+    
+    return Response(ProjectDetailsSerializer(project_details, many=True, context={'request': request}).data)
+   
 # Create your views here.
 
 def home(request):
@@ -17,13 +25,6 @@ def home(request):
         'projects':projects,
     }
     return render(request, 'portfolio_app/index.html', context)
-
-def get_project_details(request, pk):
-    
-    projects_obj = Project.objects.get(id=pk)
-    project_details = projects_obj.projectdetails_set.all()
-    data = serializers.serialize('json', project_details)
-    return JsonResponse({'data':data}, safe=False)
 
 def contact(request):    
     
