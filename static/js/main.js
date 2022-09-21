@@ -98,7 +98,7 @@ let modalToggle = () => {
               detailContainer.innerHTML += `
               <div class="carousel-item">
                   <div class="detail-grid">
-                    <img src="images/${item.image}" alt="">
+                    <img src="${item.image}" alt="">
                     <div class="side">
                       <div class="content">
                       <a href="${item.github_link}" 
